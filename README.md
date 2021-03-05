@@ -21,3 +21,4 @@ Then, just run `bot.py` with `python` and you're good to go!
 - add the rest of random messages
 - add rating reactions
 - clean up the code in general
+- make the bot work with replies
