@@ -6,7 +6,9 @@ The only dependency is `discord.py`, install that using `pip`.
 
 Get more info about the Reddit bot here: https://www.reddit.com/user/pekofy_bot/comments/krxxol/pekofy_bot_here_peko/
 
-I might host it on Heroku, I don't know yet.
+Add the bot to your server, if you want!
+
+Link: https://discord.com/api/oauth2/authorize?client_id=817481976797069383&permissions=330752&scope=bot
 
 ## Setup
 Install `discord.py` using `pip` in a terminal/command prompt.
@@ -18,7 +20,5 @@ and paste the token into `credentials.py`, replacing `<YOUR_DISCORD_TOKEN_HERE>`
 Then, just run `bot.py` with `python` and you're good to go!
 
 ## TODO list
-- add the rest of random messages
-- add rating reactions
 - clean up the code in general
-- make the bot work with replies
+- add custom funny status
