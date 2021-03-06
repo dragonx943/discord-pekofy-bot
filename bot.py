@@ -30,7 +30,7 @@ async def on_message(message):
         await message.channel.send(replies.hey_moona_reply)
     
     # pekofy command
-    if keyphrase in message.content:
+    if message.content.startswith(keyphrase):
         channel = message.channel
         
         if message.reference:
@@ -60,14 +60,16 @@ async def on_message(message):
     if message.content == "!pekopasta":  # easter egg
         await message.channel.send(replies.cursed_pekopasta)
     
-    # rating reactions   
-    if "good bot" in message.content.lower():
-        await message.channel.send(random.choice(replies.thanks))
-    if "bad bot" in message.content.lower():
-        await message.channel.send(random.choice(replies.sorrys))
-    if "stupid bot" in message.content.lower():
-        await message.channel.send(random.choice(replies.insults))
-    if "cute bot" in message.content.lower():
-        await message.channel.send(random.choice(replies.cutes))
+    # rating reactions
+    if message.reference:
+        if message.reference.resolved.author == client.user:
+            if "good bot" in message.content.lower():
+                await message.channel.send(random.choice(replies.thanks))
+            if "bad bot" in message.content.lower():
+                await message.channel.send(random.choice(replies.sorrys))
+            if "stupid bot" in message.content.lower():
+                await message.channel.send(random.choice(replies.insults))
+            if "cute bot" in message.content.lower():
+                await message.channel.send(random.choice(replies.cutes))
         
 client.run(credentials.token)
