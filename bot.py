@@ -52,12 +52,16 @@ async def on_message(message):
             reply = reply[1].content
         """
         reply = peko.pekofy(reply)
+        
         # if it couldn't be pekofied, give a random pekora clip
         if reply in ["NOTHING_CHANGED", "NO_LETTER"]:
             reply = random.choice(replies.nothing_changed_reply_list)
         
         await message.channel.send(reply)
-
+    
+    if message.content.lower() == "insult me peko":
+        await message.channel.send(random.choice(replies.insults))
+    
     if message.content == "!pekopasta":  # easter egg
         await message.channel.send(replies.cursed_pekopasta)
     
@@ -67,9 +71,7 @@ async def on_message(message):
             if "good bot" in message.content.lower():
                 await message.channel.send(random.choice(replies.thanks))
             if "bad bot" in message.content.lower():
-                await message.channel.send(random.choice(replies.sorrys))
-            if "stupid bot" in message.content.lower():
-                await message.channel.send(random.choice(replies.insults))
+                await message.channel.send(random.choice(replies.sorrys))         
             if "cute bot" in message.content.lower():
                 await message.channel.send(random.choice(replies.cutes))
         
