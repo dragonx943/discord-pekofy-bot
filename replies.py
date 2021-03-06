@@ -21,12 +21,12 @@ confused_reply = "eh?"
 thanks = ["Thank you peko", "Thank you peko!", "Thank you peko~", "Arigatou peko!", "Thank you peko!",
           "Thank you peko~", "Arigatou peko!", "Arigatou peko~", "ありがとうぺこ～", "ありがとうぺこ！",
           "Thank you peko!", "Thank you peko~", "Ehehe", "Ehehe", "Ehehe",
-          "Arigatou peko da ne! [peko~](https://www.youtube.com/watch?v=zOUPxaA6mBM)",
-          "[Arigatou peko.](https://www.youtube.com/watch?v=swGNEJ56EFI)"]
+          "Arigatou peko da ne! peko~\nhttps://www.youtube.com/watch?v=zOUPxaA6mBM",
+          "Arigatou peko.\nhttps://www.youtube.com/watch?v=swGNEJ56EFI"]
 sorrys = ["Sorry peko ; ;", "Sorry peko...", "G-Gomen peko.", "ごめんぺこ・・・"]
 insults = ["Bakatare ga!", "Bakatare ga!", "Bakatare ga!", "Bakatare ga!", "Anta wa baka nano?", "バカたれが！",
            "ばかたれが！", "あんたはバカなの？", "ぺっ", "Go peko yourself!",
-           "[Disgusting.](https://streamable.com/6ntf2g)"]
+           "Disgusting.\nhttps://streamable.com/6ntf2g"]
 loves = ["Thank you guys. Don't cheat on me, okay? [Peko~](https://streamable.com/8gagri)",
          "[Love you](https://streamable.com/dbzfxj) too peko!", "I love you too peko!", "Love you too peko~"]
 cutes = ["You're cute too peko!", "You're also cute peko!", "You're cute too peko~", "You're also cute peko~", "Ehehe", "あなたもかわいいぺこ！"]

@@ -30,8 +30,12 @@ async def on_message(message):
     # pekofy command
     if keyphrase in message.content:
         channel = message.channel
-        reply = await channel.history(limit=2).flatten()
-        reply = reply[1].content
+        
+        try:
+            reply = message.reference.resolved.content
+        except AttributeError: # if no message.reference found
+            reply = await channel.history(limit=2).flatten()
+            reply = reply[1].content
 
         reply = peko.pekofy(reply)
         # if it couldn't be pekofied, give a random pekora clip
@@ -42,5 +46,15 @@ async def on_message(message):
 
     if message.content == "!pekopasta":  # easter egg
         await message.channel.send(replies.cursed_pekopasta)
+    
+    # rating reactions   
+    if "good bot" in message.content:
+        await message.channel.send(random.choice(replies.thanks))
+    if "bad bot" in message.content:
+        await message.channel.send(random.choice(replies.sorrys))
+    if "stupid bot" in message.content:
+        await message.channel.send(random.choice(replies.insults))
+    if "cute bot" in message.content:
+        await message.channel.send(random.choice(replies.cutes))
         
 client.run(credentials.token)
