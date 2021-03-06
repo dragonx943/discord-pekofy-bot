@@ -1,3 +1,4 @@
+from discord.ext import commands
 import pekofy as peko # because i am gonna copy paste a lot of stuff
 import credentials
 import replies
@@ -15,6 +16,7 @@ async def on_ready():
     print('Logged in as {0.user}'.format(client))
     
 @client.event
+@commands.cooldown(1, 5, commands.BucketType.user)
 async def on_message(message):
     if message.author == client.user:
         return
@@ -31,12 +33,23 @@ async def on_message(message):
     if keyphrase in message.content:
         channel = message.channel
         
+        if message.reference:
+            reply = message.reference.resolved
+        else:
+            return
+            
+        if reply.author.bot:
+            await message.channel.send(replies.bot_detected)
+            return
+        
+        reply = reply.content
+        """
         try:
             reply = message.reference.resolved.content
         except AttributeError: # if no message.reference found
             reply = await channel.history(limit=2).flatten()
             reply = reply[1].content
-
+        """
         reply = peko.pekofy(reply)
         # if it couldn't be pekofied, give a random pekora clip
         if reply in ["NOTHING_CHANGED", "NO_LETTER"]:
@@ -48,13 +61,13 @@ async def on_message(message):
         await message.channel.send(replies.cursed_pekopasta)
     
     # rating reactions   
-    if "good bot" in message.content:
+    if "good bot" in message.content.lower():
         await message.channel.send(random.choice(replies.thanks))
-    if "bad bot" in message.content:
+    if "bad bot" in message.content.lower():
         await message.channel.send(random.choice(replies.sorrys))
-    if "stupid bot" in message.content:
+    if "stupid bot" in message.content.lower():
         await message.channel.send(random.choice(replies.insults))
-    if "cute bot" in message.content:
+    if "cute bot" in message.content.lower():
         await message.channel.send(random.choice(replies.cutes))
         
 client.run(credentials.token)

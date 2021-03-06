@@ -8,7 +8,7 @@ pekora_noises = {
 }
 nothing_changed_reply_list = []
 for title, link in pekora_noises.items():
-    nothing_changed_reply_list.append("Sorry, I couldn't pekofy the comment for some reason peko. "	
+    nothing_changed_reply_list.append("Sorry, I couldn't pekofy the message for some reason peko. "	
                                       "So here's a video of Pekora saying {} instead peko.\n{}".format(title, link))
 no_recursion_reply = "[no](https://www.youtube.com/watch?v=3FOe-KNUwb4)"
 pain_peko_reply = "pain-peko.\nhttps://preview.redd.it/dvk3bft2a9l51.jpg?auto=webp&s=d5e53605dc0e99ed55884fc00c9b965c7dd38e7c"
@@ -45,3 +45,5 @@ cursed_pekopasta = "So as a joke, I went to my friend's house wearing Pekora's w
                    "did we do that? Now I'm not fucking straight.\" But he still looked so cute all confused like " \
                    "that, so I took pity on him and reassured while wiping his cum off my face, \"Let's just pretend " \
                    "I'm still Pekora.\""
+
+bot_detected = "Sorry peko, this message is from a bot peko! I can't pekofy it peko!"
