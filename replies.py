@@ -46,4 +46,5 @@ cursed_pekopasta = "So as a joke, I went to my friend's house wearing Pekora's w
                    "that, so I took pity on him and reassured while wiping his cum off my face, \"Let's just pretend " \
                    "I'm still Pekora.\""
 
-bot_detected = "Sorry peko, this message is from a bot peko! I can't pekofy it peko!"
+bot_detected = "Sorry peko, this message is from a bot! I can't pekofy it!"
+status_content = "Commiting war crimes peko | !pekofy"

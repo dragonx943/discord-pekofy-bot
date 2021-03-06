@@ -14,6 +14,7 @@ def reply_chance(percent):
 @client.event
 async def on_ready():
     print('Logged in as {0.user}'.format(client))
+    await client.change_presence(activity=discord.Game(name=replies.status_content))
     
 @client.event
 @commands.cooldown(1, 5, commands.BucketType.user)

@@ -19,6 +19,5 @@ and paste the token into `credentials.py`, replacing `<YOUR_DISCORD_TOKEN_HERE>`
 
 Then, just run `bot.py` with `python` and you're good to go!
 
-## TODO list
-- clean up the code in general
-- add custom funny status
+## Pull requests
+If you want to contribute to the Discord bot, feel free to make pull requests!
