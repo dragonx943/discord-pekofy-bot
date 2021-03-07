@@ -27,8 +27,8 @@ sorrys = ["Sorry peko ; ;", "Sorry peko...", "G-Gomen peko.", "ごめんぺこ�
 insults = ["Bakatare ga!", "Bakatare ga!", "Bakatare ga!", "Bakatare ga!", "Anta wa baka nano?", "バカたれが！",
            "ばかたれが！", "あんたはバカなの？", "ぺっ", "Go peko yourself!",
            "Disgusting.\nhttps://streamable.com/6ntf2g"]
-loves = ["Thank you guys. Don't cheat on me, okay? [Peko~](https://streamable.com/8gagri)",
-         "[Love you](https://streamable.com/dbzfxj) too peko!", "I love you too peko!", "Love you too peko~"]
+loves = ["Thank you guys. Don't cheat on me, okay? Peko~\nhttps://streamable.com/8gagri",
+         "Love you too peko!\nhttps://streamable.com/dbzfxj", "I love you too peko!", "Love you too peko~"]
 cutes = ["You're cute too peko!", "You're also cute peko!", "You're cute too peko~", "You're also cute peko~", "Ehehe", "あなたもかわいいぺこ！"]
 
 cursed_pekopasta = "So as a joke, I went to my friend's house wearing Pekora's wig and clothes. I could barely stop" \
@@ -46,5 +46,12 @@ cursed_pekopasta = "So as a joke, I went to my friend's house wearing Pekora's w
                    "that, so I took pity on him and reassured while wiping his cum off my face, \"Let's just pretend " \
                    "I'm still Pekora.\""
 
-bot_detected = "Sorry peko, this message is from a bot! I can't pekofy it!"
-status_content = "Commiting war crimes peko | !pekofy"
+found_myself = "Sorry peko, I sent this message! I can't pekofy it!"
+status_content = "Commiting war crimes peko | !helpeko"
+
+helpeko = "pekofy_bot commands peko:\n" \
+       "**!pekofy** - pekofies a message that is replied\n" \
+       "**!pekopasta** - sends a Pekora cosplay copypasta\n" \
+       "**insult me peko** - insults you\n\n" \
+       "Add a bot to your server with this link: <https://discord.com/api/oauth2/authorize?client_id=817481976797069383&permissions=330752&scope=bot>\n" \
+       "If you have any problems, feel free to contact the creator (bemxio#0727) peko!"

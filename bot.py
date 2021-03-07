@@ -30,6 +30,10 @@ async def on_message(message):
     if "moona" in message.content.lower() and "pekora" in message.content.lower() and reply_chance(25):
         await message.channel.send(replies.hey_moona_reply)
     
+    # help command
+    if message.content.startswith("!helpeko"):
+        await message.channel.send(replies.helpeko)
+    
     # pekofy command
     if message.content.startswith(keyphrase):
         channel = message.channel
@@ -39,8 +43,8 @@ async def on_message(message):
         else:
             return
             
-        if reply.author.bot:
-            await message.channel.send(replies.bot_detected)
+        if reply.author == client.user:
+            await message.channel.send(replies.found_myself)
             return
         
         reply = reply.content
@@ -59,6 +63,7 @@ async def on_message(message):
         
         await message.channel.send(reply)
     
+    # insulting people
     if message.content.lower() == "insult me peko":
         await message.channel.send(random.choice(replies.insults))
     
@@ -66,7 +71,7 @@ async def on_message(message):
         await message.channel.send(replies.cursed_pekopasta)
     
     # rating reactions
-    if message.reference:
+    if message.reference: # if the message is a reply
         if message.reference.resolved.author == client.user:
             if "good bot" in message.content.lower():
                 await message.channel.send(random.choice(replies.thanks))
@@ -74,5 +79,7 @@ async def on_message(message):
                 await message.channel.send(random.choice(replies.sorrys))         
             if "cute bot" in message.content.lower():
                 await message.channel.send(random.choice(replies.cutes))
+            if message.content.lower() in ["i love you", "love you", "love", "i love you peko", "love you peko", "love peko"]:
+                await message.channel.send(random.choice(replies.loves))
         
 client.run(credentials.token)
