@@ -1,16 +1,20 @@
 pekora_noises = {
     "naww": "https://www.youtube.com/watch?v=JNgCFHbPARg",
-    "motherfucker": "https://www.youtube.com/watch?v=1OjQVMiyUMg",
+    "motherf*cker": "https://www.youtube.com/watch?v=1OjQVMiyUMg",
     "oh no jesus": "https://www.youtube.com/watch?v=MwCNEySMNWg",
     "yolo": "https://www.youtube.com/watch?v=MSUckSO-Dsw",
     "ogey rrat": "https://www.youtube.com/watch?v=JacN1MzyeKo",
-    "rrat simulator rrrra": "https://www.youtube.com/watch?v=Xr_pKdyeIJo"
+    "rrat simulator rrrra": "https://www.youtube.com/watch?v=Xr_pKdyeIJo",
+    "wao wao waoo!":"https://www.youtube.com/watch?v=O9s_HLql2YM",
+    "pardun?":"https://www.youtube.com/watch?v=a3DpRlWdnDw"
 }
+
 nothing_changed_reply_list = []
 for title, link in pekora_noises.items():
     nothing_changed_reply_list.append("Sorry, I couldn't pekofy the message for some reason peko. "	
                                       "So here's a video of Pekora saying {} instead peko.\n{}".format(title, link))
-no_recursion_reply = "[no](https://www.youtube.com/watch?v=3FOe-KNUwb4)"
+
+no_recursion_reply = "no\nhttps://www.youtube.com/watch?v=3FOe-KNUwb4"
 pain_peko_reply = "pain-peko.\nhttps://preview.redd.it/dvk3bft2a9l51.jpg?auto=webp&s=d5e53605dc0e99ed55884fc00c9b965c7dd38e7c"
 hey_moona_reply = "Hey Moona!"
 limit_reached_reply = "Sorry peko, but I can't pekofy it any further to prevent spam peko. Thank you for your understanding peko."

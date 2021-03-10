@@ -72,7 +72,7 @@ async def on_message(message):
     
     # rating reactions
     if message.reference: # if the message is a reply
-        if message.reference.resolved.author == client.user:
+        if message.reference.resolved.author == client.user: # if the reply is from pekofy bot
             if "good bot" in message.content.lower():
                 await message.channel.send(random.choice(replies.thanks))
             if "bad bot" in message.content.lower():
