@@ -1,4 +1,4 @@
-from discord.ext import commands
+from discord.ext import commands, tasks
 import pekofy as peko # because i am gonna copy paste a lot of stuff
 import credentials
 import replies
@@ -6,15 +6,20 @@ import discord
 import random
 
 client = discord.Client()
-keyphrase = '!pekofy'
+prefix = "!"
 
 def reply_chance(percent):
     return random.randint(0, 100) <= percent
 
 @client.event
 async def on_ready():
-    print('Logged in as {0.user}'.format(client))
-    await client.change_presence(activity=discord.Game(name=replies.status_content))
+    print(f'Logged in as {client.user}')
+    await client.change_presence(
+        activity = discord.Activity(
+            type = discord.ActivityType.watching,
+            name = f"over {len(client.guilds)} servers peko! | !helpeko"
+        )
+    )
     
 @client.event
 @commands.cooldown(1, 5, commands.BucketType.user)
@@ -31,11 +36,11 @@ async def on_message(message):
         await message.channel.send(replies.hey_moona_reply)
     
     # help command
-    if message.content.startswith("!helpeko"):
+    if message.content.startswith(prefix + "helpeko"):
         await message.channel.send(replies.helpeko)
     
     # pekofy command
-    if message.content.startswith(keyphrase):
+    if message.content.startswith(prefix + "pekofy"):
         channel = message.channel
         
         if message.reference:
@@ -67,7 +72,7 @@ async def on_message(message):
     if message.content.lower() == "insult me peko":
         await message.channel.send(random.choice(replies.insults))
     
-    if message.content == "!pekopasta":  # easter egg
+    if message.content == prefix + "pekopasta":  # easter egg
         await message.channel.send(replies.cursed_pekopasta)
     
     # rating reactions
@@ -81,5 +86,9 @@ async def on_message(message):
                 await message.channel.send(random.choice(replies.cutes))
             if message.content.lower() in ["i love you", "love you", "love", "i love you peko", "love you peko", "love peko"]:
                 await message.channel.send(random.choice(replies.loves))
-        
+
+    # credits
+    if message.content.startswith(prefix + "credits"):
+        await message.channel.send(replies.credits)
+
 client.run(credentials.token)

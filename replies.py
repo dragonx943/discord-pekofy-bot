@@ -27,12 +27,16 @@ thanks = ["Thank you peko", "Thank you peko!", "Thank you peko~", "Arigatou peko
           "Thank you peko!", "Thank you peko~", "Ehehe", "Ehehe", "Ehehe",
           "Arigatou peko da ne! peko~\nhttps://www.youtube.com/watch?v=zOUPxaA6mBM",
           "Arigatou peko.\nhttps://www.youtube.com/watch?v=swGNEJ56EFI"]
+
 sorrys = ["Sorry peko ; ;", "Sorry peko...", "G-Gomen peko.", "ごめんぺこ・・・"]
+
 insults = ["Bakatare ga!", "Bakatare ga!", "Bakatare ga!", "Bakatare ga!", "Anta wa baka nano?", "バカたれが！",
            "ばかたれが！", "あんたはバカなの？", "ぺっ", "Go peko yourself!",
            "Disgusting.\nhttps://streamable.com/6ntf2g"]
+
 loves = ["Thank you guys. Don't cheat on me, okay? Peko~\nhttps://streamable.com/8gagri",
          "Love you too peko!\nhttps://streamable.com/dbzfxj", "I love you too peko!", "Love you too peko~"]
+
 cutes = ["You're cute too peko!", "You're also cute peko!", "You're cute too peko~", "You're also cute peko~", "Ehehe", "あなたもかわいいぺこ！"]
 
 cursed_pekopasta = "So as a joke, I went to my friend's house wearing Pekora's wig and clothes. I could barely stop" \
@@ -51,11 +55,17 @@ cursed_pekopasta = "So as a joke, I went to my friend's house wearing Pekora's w
                    "I'm still Pekora.\""
 
 found_myself = "Sorry peko, I sent this message! I can't pekofy it!"
-status_content = "Commiting war crimes peko | !helpeko"
+#status_content = "Commiting war crimes peko | !helpeko"
 
 helpeko = "pekofy_bot commands peko:\n" \
        "**!pekofy** - pekofies a message that is replied\n" \
        "**!pekopasta** - sends a Pekora cosplay copypasta\n" \
+       "**!helpeko** - sends this help message\n" \
+       "**!credits** - shows credits of all things that made pekofy_bot exist\n" \
        "**insult me peko** - insults you\n\n" \
        "Add a bot to your server with this link: <https://discord.com/api/oauth2/authorize?client_id=817481976797069383&permissions=330752&scope=bot>\n" \
        "If you have any problems, feel free to contact the creator (bemxio#0727) peko!"
+
+credits = "Thank you so much, denki, for helping with the verification of me peko!\n" \
+        "I am made in Python (with discord.py), and hosted on Heroku!\n" \
+        "Check out the original Reddit bot made by esmo-c! https://github.com/emso-c/pekofy-bot"
