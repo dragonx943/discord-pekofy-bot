@@ -2,8 +2,6 @@
 
 u/pekofy-bot from Reddit, but as a Discord bot.
 
-The only dependency is `discord.py`, install that using `pip`.
-
 Get more info about the Reddit bot here: https://www.reddit.com/user/pekofy_bot/comments/krxxol/pekofy_bot_here_peko/
 
 Add the bot to your server, if you want!
@@ -11,7 +9,7 @@ Add the bot to your server, if you want!
 Link: https://discord.com/api/oauth2/authorize?client_id=817481976797069383&permissions=330752&scope=bot
 
 ## Setup
-Install `discord.py` using `pip` in a terminal/command prompt.
+Install dependencies from `requirements.txt` using `pip` in a terminal/command prompt.
 
 After that, make a new bot in Discord Developer Portal,
 
