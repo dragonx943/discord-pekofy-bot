@@ -55,7 +55,7 @@ cursed_pekopasta = "So as a joke, I went to my friend's house wearing Pekora's w
                    "I'm still Pekora.\""
 
 found_myself = "Sorry peko, I sent this message! I can't pekofy it!"
-#status_content = "Commiting war crimes peko | !helpeko"
+status_content = "Commiting war crimes peko | !helpeko"
 
 helpeko = "pekofy_bot commands peko:\n" \
        "**!pekofy** - pekofies a message that is replied\n" \
