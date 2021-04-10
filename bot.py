@@ -6,7 +6,7 @@ import discord
 import random
 
 prefix = "!"
-bot = commands.Bot(command_prefix=prefix)
+bot = commands.Bot(command_prefix=prefix, help_command=None)
 
 def reply_chance(percent):
     return random.randint(0, 100) <= percent
@@ -57,6 +57,7 @@ async def pekofy(ctx):
     if ctx.message.reference:
         reply = ctx.message.reference.resolved
     else:
+        await ctx.send(replies.no_reply)
         return
             
     if reply.author == bot.user:
@@ -74,16 +75,33 @@ async def pekofy(ctx):
 @bot.command()
 @commands.cooldown(1, 5, commands.BucketType.user)
 async def pekopasta(ctx):
-    await ctx.send(replies.cursed_pekopasta)
+    if ctx.channel.is_nsfw():
+        await ctx.send(replies.cursed_pekopasta)
+    else:
+        await ctx.send(replies.cursed_pekopasta_censored)
     
 @bot.command()
 @commands.cooldown(1, 5, commands.BucketType.user)
 async def helpeko(ctx):
-    await ctx.send(replies.helpeko)
+    await ctx.send(embed=replies.helpeko)
     
 @bot.command()
 @commands.cooldown(1, 5, commands.BucketType.user)
 async def credits(ctx):
     await ctx.send(replies.credits)
-    
+
+@bot.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def invite(ctx):
+    await ctx.send(replies.invite)
+
+@bot.command()
+@commands.is_owner()
+async def pekodebug(ctx):
+    content = replies.pekodebug_template.format(
+        len(bot.guilds),
+        round(bot.latency, 2)
+    )
+    await ctx.send(content)
+
 bot.run(credentials.token)
