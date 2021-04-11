@@ -1,3 +1,4 @@
+from discord import Embed
 import regex
 
 def is_japanese(text):
@@ -59,3 +60,18 @@ def pekofy(input_text):
         return "NOTHING_CHANGED"
 
     return new_text[:-1].replace("u/","u​/")
+
+def embed_pekofy(embed):
+    pekoembed = embed.to_dict()
+
+    if pekoembed.get("title"):
+        pekoembed["title"] = pekofy(pekoembed["title"])
+    
+    if pekoembed.get("description"):
+        pekoembed["description"] = pekofy(pekoembed["description"])
+    
+    if pekoembed.get("author"):
+        if pekoembed["author"].get("name"):
+            pekoembed["author"]["name"] = pekofy(pekoembed["author"]["name"])
+
+    return Embed.from_dict(pekoembed)

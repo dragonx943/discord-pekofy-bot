@@ -114,6 +114,6 @@ credits = "Thank you so much, denki, for helping with the verification of me pek
         "Check out the original Reddit bot made by esmo-c! https://github.com/emso-c/pekofy-bot"
 
 pekodebug_template = "Server count: **{0}**\n" \
-                     "Ping: ***{1} ms**"
+                     "Ping: **{1} ms**"
 
 no_reply = "You need to reply to a message you want to be pekofy'd peko!"

@@ -64,13 +64,18 @@ async def pekofy(ctx):
         await ctx.send(replies.found_myself)
         return
     
-    reply = reply.content
-    reply = peko.pekofy(reply)
+    if reply.embeds:
+        reply = peko.embed_pekofy(reply.embeds[0])
+    else:
+        reply = peko.pekofy(reply.content)
     
     if reply in ["NOTHING_CHANGED", "NO_LETTER"]:
         reply = random.choice(replies.nothing_changed_reply_list)
     
-    await ctx.send(reply)
+    if isinstance(reply, discord.Embed):
+        await ctx.send(embed = reply)
+    else:
+        await ctx.send(reply)
     
 @bot.command()
 @commands.cooldown(1, 5, commands.BucketType.user)
@@ -100,7 +105,7 @@ async def invite(ctx):
 async def pekodebug(ctx):
     content = replies.pekodebug_template.format(
         len(bot.guilds),
-        round(bot.latency, 2)
+        round(bot.latency * 1000)
     )
     await ctx.send(content)
 
