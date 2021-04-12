@@ -77,7 +77,7 @@ invite = "https://discord.com/api/oauth2/authorize?client_id=817481976797069383&
 
 helpeko = Embed(
     title = "pekofy_bot commands:",
-    description = "If you have any problems, feel free to contact the creator (bemxio#0727) peko!"
+    description = "If you have any problems, feel free to contact the creator on Discord (bemxio#5847) or on Reddit (u/bemxio) peko!"
 )
 
 helpeko.add_field(
@@ -117,3 +117,4 @@ pekodebug_template = "Server count: **{0}**\n" \
                      "Ping: **{1} ms**"
 
 no_reply = "You need to reply to a message you want to be pekofy'd peko!"
+cooldown_msg = "You all are going too fast peko! Please wait {0} seconds to type this command!"
