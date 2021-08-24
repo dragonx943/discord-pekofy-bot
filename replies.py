@@ -77,7 +77,7 @@ invite = "https://discord.com/api/oauth2/authorize?client_id=817481976797069383&
 
 helpeko = Embed(
     title = "pekofy_bot commands:",
-    description = "If you have any problems, feel free to contact the creator on Discord (bemxio#5847) or on Reddit (u/bemxio) peko!"
+    description = "If you have any problems, feel free to contact the creator on Discord (bemxio#5847) or on Reddit (u/bemxioo) peko!"
 )
 
 helpeko.add_field(
