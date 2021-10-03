@@ -33,6 +33,9 @@ def pekofy(input_text):
         if is_mention(word) or is_url(word):
             continue
 
+        if word.isupper():
+            keyword = keyword.upper()
+         
         for punctuation in punctuation_list:
             if punctuation in word:
                 #print(words)

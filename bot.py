@@ -75,11 +75,19 @@ async def pekofy(ctx):
         await ctx.send(replies.found_myself)
         return
     
+    content = reply.content
+
     # if a reply does have any embeds
     if reply.embeds:
         reply = peko.embed_pekofy(reply.embeds[0])
+    elif reply.mentions:
+        for member in reply.mentions:
+            content = content.replace(member.mention.replace("<@", "<@!"), f"\@{member.name}")
+            content = content.replace(member.mention, f"\@{member.name}")
+
+        reply = peko.pekofy(content)
     else:
-        reply = peko.pekofy(reply.content)
+        reply = peko.pekofy(content)
     
     if reply in ["NOTHING_CHANGED", "NO_LETTER"]:
         reply = random.choice(replies.nothing_changed_reply_list)
