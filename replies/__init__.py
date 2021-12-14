@@ -1,0 +1,1 @@
+from .copypasta import *

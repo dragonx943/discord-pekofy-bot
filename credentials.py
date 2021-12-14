@@ -1,1 +1,0 @@
-token = "<YOUR_DISCORD_TOKEN_HERE>"

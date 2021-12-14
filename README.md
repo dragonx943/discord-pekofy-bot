@@ -8,6 +8,10 @@ Add the bot to your server, if you want!
 
 Link: https://discord.com/api/oauth2/authorize?client_id=817481976797069383&permissions=330752&scope=bot
 
+**This is a rewrite branch of the bot. The code here might be unstable and not suitable for running.**
+
+**This branch will be merged onto the master branch soon.**
+
 ## Setup
 Install dependencies from `requirements.txt` using `pip` in a terminal/command prompt.
 

@@ -1,3 +1,2 @@
-discord.py==1.6.0
-regex
-aiohttp>=3.8.0 # not directly required, pinned by Snyk to avoid a vulnerability
+py-cord==1.7.3
+regex==2021.11.10
