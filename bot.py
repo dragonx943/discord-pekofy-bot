@@ -8,6 +8,10 @@ intents.messages = True
 
 bot = commands.Bot(command_prefix=os.environ["PEKOBOT_PREFIX"], intents=intents)
 
+@bot.event
+async def on_ready():
+    print(f"logged in as {bot.user}")
+
 # loading extensions
 bot.load_extension("extensions.pekofy")
 bot.load_extension("extensions.reactions")

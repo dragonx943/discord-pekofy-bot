@@ -1,5 +1,6 @@
 from discord.ext import commands
 from discord import Embed
+import replies
 import regex
 
 from modules import pekofication
@@ -14,7 +15,7 @@ class Pekofy(commands.Cog):
         if ctx.message.reference: # reference is a reply to a message
             message = ctx.message.reference.resolved
         else:
-            return await ctx.send(replies.no_reference)
+            return await ctx.send(replies.handling.no_reference)
 
         if message.embeds:
             response = await pekofication.pekofy_embed(message.embeds[-1])
@@ -22,7 +23,7 @@ class Pekofy(commands.Cog):
             response = await pekofication.pekofy(message.clean_content)
 
         if response == message.clean_content:
-            return await ctx.send(replies.no_change)
+            return await ctx.send(replies.handling.no_change)
 
         if isinstance(response, Embed):
             await ctx.send(embed=response)

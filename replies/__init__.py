@@ -1,4 +1,3 @@
-import copypasta
-import emotions
+from . import copypasta, emotions, handling, triggers
 
-__all__ = ["copypasta", "emotions"]
+__all__ = ["copypasta", "emotions", "handling", "triggers"]
