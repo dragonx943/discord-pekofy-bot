@@ -1,4 +1,5 @@
 from discord.ext import commands
+from discord import Embed
 import regex
 
 from modules import pekofication
@@ -16,9 +17,17 @@ class Pekofy(commands.Cog):
             return await ctx.send(replies.no_reference)
 
         if message.embeds:
-            await ctx.send(embed=await pekofication.pekofy_embed(message.embeds[-1]))
+            response = await pekofication.pekofy_embed(message.embeds[-1])
         else:
-            await ctx.send(await pekofication.pekofy(message.clean_content))
+            response = await pekofication.pekofy(message.clean_content)
+
+        if response == message.clean_content:
+            return await ctx.send(replies.no_change)
+
+        if isinstance(response, Embed):
+            await ctx.send(embed=response)
+        else:
+            await ctx.send(response)
 
 def setup(bot):
     bot.add_cog(Pekofy(bot))
