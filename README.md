@@ -1,25 +1,3 @@
-# discord-pekofy-bot
+# This is a rewrite branch of the bot. The code here might be unstable and not suitable for running.
 
-u/pekofy-bot from Reddit, but as a Discord bot.
-
-Get more info about the Reddit bot here: https://www.reddit.com/user/pekofy_bot/comments/krxxol/pekofy_bot_here_peko/
-
-Add the bot to your server, if you want!
-
-Link: https://discord.com/api/oauth2/authorize?client_id=817481976797069383&permissions=330752&scope=bot
-
-**This is a rewrite branch of the bot. The code here might be unstable and not suitable for running.**
-
-**This branch will be merged onto the master branch soon.**
-
-## Setup
-Install dependencies from `requirements.txt` using `pip` in a terminal/command prompt.
-
-After that, make a new bot in Discord Developer Portal,
-
-and paste the token into `credentials.py`, replacing `<YOUR_DISCORD_TOKEN_HERE>` with your token.
-
-Then, just run `bot.py` with `python` and you're good to go!
-
-## Pull requests
-If you want to contribute to the Discord bot, feel free to make pull requests!
+This branch will be the main branch after the rewrite is done.
