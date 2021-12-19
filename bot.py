@@ -13,6 +13,7 @@ async def on_ready():
     print(f"logged in as {bot.user}")
 
 # loading extensions
+bot.load_extension("jishaku")
 bot.load_extension("extensions.pekofy")
 bot.load_extension("extensions.reactions")
 
