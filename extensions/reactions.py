@@ -1,4 +1,5 @@
-from discord.ext import commands
+from discord import activity
+from discord.ext import commands, tasks
 import replies
 import random
 
@@ -43,5 +44,16 @@ class Reactions(commands.Cog):
             if any(x in content for x in replies.triggers.thank):
                 return await message.channel.send(random.choice(replies.emotions.thank))
 
+class Status(commands.Cog):
+    def __init__(self, bot):
+        self.bot = bot
+        self.change_status.start()
+    
+    @tasks.loop(minutes=10.0)
+    async def change_status(self):
+        await self.bot.wait_until_ready()
+        await self.bot.change_presence(activity=random.choice(replies.statuses.statuses))
+
 def setup(bot):
     bot.add_cog(Reactions(bot))
+    bot.add_cog(Status(bot))
