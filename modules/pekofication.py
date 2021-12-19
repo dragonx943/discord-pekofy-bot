@@ -28,7 +28,7 @@ async def pekofy(input_text):
             keyword = keyword.upper()
          
         for punctuation in punctuation_list:
-            if punctuation in word:
+            if word.endswith(punctuation):
                 words[index] = word.replace(punctuation, keyword + punctuation)
                 break
             elif index + 1 == length:

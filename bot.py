@@ -16,7 +16,7 @@ logger = logging.basicConfig(
 intents = Intents.default()
 intents.messages = True
 
-bot = commands.Bot(command_prefix=os.environ["PEKOBOT_PREFIX"], intents=intents)
+bot = commands.Bot(command_prefix=os.environ["PEKOBOT_PREFIX"], help_command=None, intents=intents)
 
 # specific events (mostly for logging)
 @bot.event
@@ -34,6 +34,7 @@ async def on_command_error(ctx, error):
 bot.load_extension("jishaku")
 bot.load_extension("extensions.pekofy")
 bot.load_extension("extensions.reactions")
+bot.load_extension("extensions.help")
 
 bot.run(os.environ["PEKOBOT_TOKEN"])
 logging.info("Shutting down...\n")
