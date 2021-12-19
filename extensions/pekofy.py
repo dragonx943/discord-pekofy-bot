@@ -10,7 +10,7 @@ class Pekofy(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(name='pekofy')
+    @commands.command()
     async def pekofy(self, ctx):
         if ctx.message.reference: # reference is a reply to a message
             message = ctx.message.reference.resolved
@@ -29,6 +29,13 @@ class Pekofy(commands.Cog):
             await ctx.send(embed=response)
         else:
             await ctx.send(response)
+
+    @commands.command()
+    async def pekopasta(self, ctx):
+        if ctx.channel.nsfw:
+            await ctx.send(replies.copypasta.nsfw)
+        else:
+            await ctx.send(replies.copypasta.sfw)
 
 def setup(bot):
     bot.add_cog(Pekofy(bot))
