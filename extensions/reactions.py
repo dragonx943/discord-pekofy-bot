@@ -1,4 +1,3 @@
-from discord import activity
 from discord.ext import commands, tasks
 import replies
 import random
