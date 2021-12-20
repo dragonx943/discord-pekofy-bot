@@ -22,9 +22,12 @@ class Pekofy(commands.Cog):
         else:
             response = await pekofication.pekofy(message.clean_content)
 
+        if response == "TOO_MANY_PEKOS":
+            return await ctx.send(replies.handling.limit_reached)
+        
         if response == message.clean_content:
             return await ctx.send(replies.handling.no_change)
-
+        
         if isinstance(response, Embed):
             await ctx.send(embed=response)
         else:

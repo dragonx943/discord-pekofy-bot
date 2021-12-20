@@ -14,6 +14,8 @@ async def pekofy(input_text):
     corrected = input_text.replace("\n", "\n ")
     words = corrected.split(" ")
     length = len(words)
+    
+    pekotimes = 0 # number of times 'peko' has occured
 
     for index, word in enumerate(words):
         if japanese.match(word):
@@ -26,7 +28,18 @@ async def pekofy(input_text):
 
         if word.isupper():
             keyword = keyword.upper()
-         
+
+        print(word)
+
+        # checking how many times peko has occured
+        if word == keyword.strip():
+            pekotimes += 1
+
+            if pekotimes > 3:
+                return "TOO_MANY_PEKOS"
+        else:
+            pekotimes = 0
+        
         for punctuation in punctuation_list:
             if word.endswith(punctuation):
                 words[index] = word.replace(punctuation, keyword + punctuation)
