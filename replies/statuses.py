@@ -18,7 +18,7 @@ statuses = [
         type=ActivityType.playing
     ),
     Activity(
-        name="to Pekora's ",
+        name="Pekora's AH↓ HA↑ HA↓ HA↑ | !helpeko",
         type=ActivityType.listening
     ),
     Activity(
