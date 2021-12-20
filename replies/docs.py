@@ -1,4 +1,4 @@
-title = "All my commands! Peko~"
+title = "All my commands, peko!"
 description = "If you have any problems with me, feel free to contact the creator on Discord (bemxio#5847) or on Reddit (u/bemxioo) peko!"
 invite = "Here's my invite link peko! https://discord.com/api/oauth2/authorize?client_id=817481976797069383&permissions=116736&scope=bot"
 dm_check = "Check your DMs peko!"
