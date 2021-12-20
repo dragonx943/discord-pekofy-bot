@@ -16,7 +16,8 @@ logger = logging.basicConfig(
 intents = Intents.default()
 intents.messages = True
 
-bot = commands.Bot(command_prefix=os.environ["PEKOBOT_PREFIX"], help_command=None, intents=intents)
+prefix = "!"
+bot = commands.Bot(command_prefix=prefix, help_command=None, intents=intents)
 
 # specific events (mostly for logging)
 @bot.event
