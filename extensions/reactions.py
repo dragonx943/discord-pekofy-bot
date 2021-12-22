@@ -25,7 +25,7 @@ class Reactions(commands.Cog):
                 return await message.channel.send(replies.handling.hey_moona)
 
         if content == replies.handling.insult_me_peko:
-            return await message.channel.send(random.choice(replies.handling.insult_me_peko))
+            return await message.channel.send(random.choice(replies.emotions.insult))
         
         if not message.reference:
             return
