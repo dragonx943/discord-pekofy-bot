@@ -1,7 +1,6 @@
 from discord.ext import commands
 from discord import Embed
-import replies
-import regex
+import random
 
 from modules import pekofication
 import replies
@@ -15,7 +14,7 @@ class Pekofy(commands.Cog):
         if ctx.message.reference: # reference is a reply to a message
             message = ctx.message.reference.resolved
         else:
-            return await ctx.send(replies.handling.no_reference)
+            return await ctx.send(random.choice(replies.handling.no_reference))
 
         if message.embeds:
             response = await pekofication.pekofy_embed(message.embeds[-1])
