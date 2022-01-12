@@ -6,7 +6,7 @@ japanese = regex.compile("[\u3000-\u303f\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f\
 url = regex.compile(r"https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)")
 
 # punctuation list with EN and JP marks to know where to put 'peko'
-en_punctuation_list = ['.', '?', '!', '\]']
+en_punctuation_list = ['.', ',', '?', '!', ':', ';', '\]']
 jp_punctuation_list = ['。', '？', '！', '」', '・', '”', '】', '』', '；']
 punctuation_list = en_punctuation_list + jp_punctuation_list + ['\n']
 
