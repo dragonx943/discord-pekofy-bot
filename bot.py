@@ -19,20 +19,10 @@ intents.messages = True
 prefix = "!"
 bot = commands.Bot(command_prefix=prefix, help_command=None, intents=intents)
 
-# specific events (mostly for logging)
-@bot.event
-async def on_ready():
-    logging.info(f"Succesfully logged in as {bot.user}!")
-
-@bot.event
-async def on_command_error(ctx, error):
-    if isinstance(error, commands.CommandNotFound):
-        return
-    
-    logging.warning(f"A user tried to use {ctx.command} but got an error: {error}")
-
 # loading extensions
 bot.load_extension("jishaku")
+
+bot.load_extension("extensions.events")
 bot.load_extension("extensions.pekofy")
 bot.load_extension("extensions.reactions")
 bot.load_extension("extensions.help")
