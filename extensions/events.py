@@ -17,7 +17,10 @@ class Events(commands.Cog):
     async def on_command_error(self, ctx, error):
         if isinstance(error, commands.CommandNotFound):
             return
-
+        
+        if isinstance(error, commands.CommandOnCooldown):
+            return await ctx.send(replies.handling.command_cooldown.format(round(error.retry_after, 2)))
+        
         if isinstance(error, commands.CommandInvokeError):
             if isinstance(error.original, Forbidden):
                 return await ctx.send(replies.handling.cant_dm)

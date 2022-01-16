@@ -36,3 +36,4 @@ or message my developer (bemxio#5847 on Discord or u/bemxioo on Reddit) includin
 {}
 ```
 """
+command_cooldown = "You all are going too fast peko~! Please wait {} seconds before typing this command again!"

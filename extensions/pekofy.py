@@ -10,6 +10,7 @@ class Pekofy(commands.Cog):
         self.bot = bot
 
     @commands.command()
+    @commands.cooldown(1, 5.0, commands.BucketType.user)
     async def pekofy(self, ctx):
         if ctx.message.reference: # reference is a reply to a message
             message = ctx.message.reference.resolved
@@ -33,6 +34,7 @@ class Pekofy(commands.Cog):
             await ctx.send(response)
 
     @commands.command()
+    @commands.cooldown(1, 10.0, commands.BucketType.guild)
     async def pekopasta(self, ctx):
         if ctx.channel.nsfw:
             await ctx.send(replies.copypasta.nsfw)
