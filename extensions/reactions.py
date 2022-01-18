@@ -26,6 +26,10 @@ class Reactions(commands.Cog):
 
         if content == replies.handling.insult_me_peko:
             return await message.channel.send(random.choice(replies.emotions.insult))
+
+        if replies.handling.pekorat in content:
+            if random_chance(25):
+                return await message.channel.send(random.choice(replies.emotions.pekorat))
         
         if not message.reference:
             return

@@ -27,6 +27,10 @@ help = {
     "invite": {
         "usage": "!invite",
         "description": "Sends you a link to invite me to your server!"
+    },
+    "pekorat": {
+        "usage": "pekorat",
+        "description": "Sends you Pekora showing a rat inside of her :^)"
     }
 }
 

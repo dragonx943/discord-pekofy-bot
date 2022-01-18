@@ -43,3 +43,8 @@ cute = [
     "Ehehe", 
     "あなたもかわいいぺこ！"
 ]
+
+pekorat = [
+    "https://cdn.discordapp.com/attachments/857811318195486740/880255390644850758/rrat.mp4"
+    "https://bemxio.s-ul.eu/b2JmwJfD.jpg"
+]
