@@ -1,5 +1,5 @@
 from discord.ext import commands
-from discord import Embed
+from discord import Embed, ChannelType
 import random
 
 from modules import pekofication
@@ -35,8 +35,8 @@ class Pekofy(commands.Cog):
 
     @commands.command()
     @commands.cooldown(1, 10.0, commands.BucketType.guild)
-    async def pekopasta(self, ctx):
-        if ctx.channel.nsfw:
+    async def pekopasta(self, ctx):     
+        if ctx.channel.type == ChannelType.private or ctx.channel.is_nsfw():
             await ctx.send(replies.copypasta.nsfw)
         else:
             await ctx.send(replies.copypasta.sfw)
