@@ -26,7 +26,7 @@ class Pekofy(commands.Cog):
             return await ctx.send(replies.handling.limit_reached)
         
         if response == message.clean_content:
-            return await ctx.send(replies.handling.no_change)
+            return await ctx.send(random.choice(replies.handling.no_change))
         
         if isinstance(response, Embed):
             await ctx.send(embed=response)
