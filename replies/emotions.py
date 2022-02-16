@@ -35,6 +35,13 @@ love = [
     "Love you too peko~"
 ]
 
+marry = [
+    "Thank you, but I cant. I'm everyone's idol, peko~",
+    "I bet you tell this to all bots, baka peko!",
+    "https://www.youtube.com/watch?v=3FOe-KNUwb4",
+    "HA↑HA↓HA↑HA↓HA↑HA↓HA↑HA↓HA↑HA↓HA↑HA↓HA↑HA↓HA↑HA↓"
+]
+
 cute = [
     "You're cute too peko!", 
     "You're also cute peko!", 

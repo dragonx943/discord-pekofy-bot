@@ -46,6 +46,9 @@ class Reactions(commands.Cog):
 
             if any(x in content for x in replies.triggers.thank):
                 return await message.channel.send(random.choice(replies.emotions.thank))
+                
+            if any(x in content for x in replies.triggers.marry):
+                return await message.channel.send(random.choice(replies.emotions.marry))
 
 class Status(commands.Cog):
     def __init__(self, bot):
