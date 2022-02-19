@@ -4,5 +4,5 @@ sorry = ["bad", "worst", "awful", "terrible", "unbased"]
 thank = ["good", "best", "amazing", "wonderful", "based"]
 marry = ["marry me", "marry me peko"]
 
-pain = ["pain",  "pain.", "pain...", "pain peko"]
+pain = ["pain", "pain.", "pain...", "pain peko", "pain peko.", "pain-peko", "pain-peko."]
 moona = ["moona", "pekora"]

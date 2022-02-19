@@ -16,7 +16,7 @@ class Reactions(commands.Cog):
 
         content = message.clean_content.lower()
         
-        if any(x in content for x in replies.triggers.pain):
+        if any(x == content for x in replies.triggers.pain):
             if random_chance(25):
                 return await message.channel.send(replies.handling.pain_peko)
             
