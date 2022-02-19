@@ -1,4 +1,4 @@
-from discord.errors import Forbidden
+from discord.errors import HTTPException, Forbidden
 from discord.ext import commands
 
 import logging
@@ -22,6 +22,12 @@ class Events(commands.Cog):
             return await ctx.send(replies.handling.command_cooldown.format(round(error.retry_after, 2)))
         
         if isinstance(error, commands.CommandInvokeError):
+            if isinstance(error.original, HTTPException) and error.original.code == 50035:
+                # since Discord's API sends an HTTP exception itself,
+                # there's a need for checking the error code.
+                # code 50035 is the error code for "Invalid Form Body in content: Must be 2000 or fewer in length."
+                return await ctx.send(replies.handling.message_too_long)
+            
             if isinstance(error.original, Forbidden):
                 return await ctx.send(replies.handling.cant_dm)
         

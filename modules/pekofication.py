@@ -29,8 +29,6 @@ async def pekofy(input_text):
         if word.isupper():
             keyword = keyword.upper()
 
-        print(word)
-
         # checking how many times peko has occured
         if word == keyword.strip():
             pekotimes += 1
