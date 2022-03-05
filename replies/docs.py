@@ -41,3 +41,14 @@ Thank you, denki, for helping with my verification peko, so that I could join mo
 and thank you, all of you that are reading this, for using me and having fun with me! I love you all peko! <3
 - pekofy_bot
 ```"""
+
+birthday_title = "Oh right, it's my birthday peko!"
+birthday_description = """
+I was born on March 5th 2021, and I am now a year old!
+Because of this, I have my own server now peko!
+There will be announcements for new changelogs or outages there, so you can always know if I am down or not!
+You can also expect other cool events on special occasions, as a nousagi!
+
+Come check it out [here](https://discord.gg/PBgfctRVxy) peko!
+And thank you for using me, peko <3
+"""
