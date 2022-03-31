@@ -2,7 +2,7 @@ no_change = [
     "Sorry, I couldn\'t pekofy the message for some reason peko. So here\'s a clip of Pekora saying [{}]({}) instead peko.".format(title, link) \
     for title, link in {
         "naww": "https://www.youtube.com/watch?v=JNgCFHbPARg",
-        "motherf*cker": "https://www.youtube.com/watch?v=1OjQVMiyUMg",
+        "motherf*cker": "https://www.youtube.com/watch?v=57ToRyDoTAE",
         "oh no jesus": "https://www.youtube.com/watch?v=MwCNEySMNWg",
         "yolo": "https://www.youtube.com/watch?v=MSUckSO-Dsw",
         "ogey rrat": "https://www.youtube.com/watch?v=JacN1MzyeKo",
