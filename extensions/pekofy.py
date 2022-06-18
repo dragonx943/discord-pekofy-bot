@@ -43,11 +43,7 @@ class Pekofy(commands.Cog):
             await ctx.send(replies.copypasta.nsfw)
         else:
             await ctx.send(replies.copypasta.sfw)
-
-class Pekogacha(commands.Cog):
-    def __init__(self, bot):
-        self.bot = bot
-
+    
     @commands.command()
     @commands.cooldown(1, 10.0, commands.BucketType.guild)
     async def pekogacha(self, ctx):
@@ -58,4 +54,3 @@ class Pekogacha(commands.Cog):
 
 def setup(bot):
     bot.add_cog(Pekofy(bot))
-    bot.add_cog(Pekogacha(bot))
