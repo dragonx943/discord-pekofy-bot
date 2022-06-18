@@ -4,7 +4,9 @@ import random
 
 from modules import pekofication
 import replies
-from extensions.reactions import random_chance
+
+def random_chance(precent):
+    return random.randint(1, 100) <= precent
 
 class Pekofy(commands.Cog):
     def __init__(self, bot):
@@ -13,11 +15,11 @@ class Pekofy(commands.Cog):
     @commands.command()
     @commands.cooldown(1, 5.0, commands.BucketType.user)
     async def pekofy(self, ctx):
-        if ctx.message.reference: # reference is a reply to a message
-            message = ctx.message.reference.resolved
-        else:
+        if not ctx.message.reference: # reference is a reply to a message
             return await ctx.send(random.choice(replies.handling.no_reference))
 
+        message = ctx.message.reference.resolved
+        
         if message.embeds:
             response = await pekofication.pekofy_embed(message.embeds[-1])
         else:
@@ -49,7 +51,7 @@ class Pekogacha(commands.Cog):
     @commands.command()
     @commands.cooldown(1, 10.0, commands.BucketType.guild)
     async def pekogacha(self, ctx):
-        if(random_chance(25)):
+        if random_chance(25):
             await ctx.message.reply(random.choice(replies.handling.gacha_win))
         else:
             await ctx.message.reply(random.choice(replies.handling.gacha_lose))
