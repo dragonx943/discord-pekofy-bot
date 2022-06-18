@@ -1,3 +1,5 @@
+import random
+
 no_change = [
     "Sorry, I couldn\'t pekofy the message for some reason peko. So here\'s a clip of Pekora saying [{}]({}) instead peko.".format(title, link) \
     for title, link in {
@@ -39,3 +41,21 @@ or message my developer (bemxio#5847 on Discord or u/bemxioo on Reddit) includin
 """
 command_cooldown = "You all are going too fast peko~! Please wait {} seconds before typing this command again!"
 message_too_long = "This message is toooo long peko~!!! I can't send the pekofied version of it!"
+
+gacha_win = [
+    "Congratuttrasyon! You won {} Pekos! {}".format(pekos, link) 
+    for pekos, link in {
+        "100": "https://www.youtube.com/shorts/xuFSlfznFzU",
+        "2000": "https://i.redd.it/jnknro1eysg51.jpg",
+        "1 Morbillion": "https://youtu.be/ANUYB8q5PsE"
+    }.items()
+]
+
+gacha_lose = [
+    "Oh no! You lost {} Pekos! {}".format(pekos, link) 
+    for pekos, link in {
+        "100": "https://i.kym-cdn.com/photos/images/original/002/241/259/1c1.png",
+        "1000": "https://www.youtube.com/shorts/ljxEIQZyjGo",
+        "ALL your": "https://www.youtube.com/watch?v=vHpFuQPtE_U"
+    }.items()
+]

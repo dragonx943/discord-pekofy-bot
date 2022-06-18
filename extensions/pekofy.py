@@ -4,6 +4,7 @@ import random
 
 from modules import pekofication
 import replies
+from extensions.reactions import random_chance
 
 class Pekofy(commands.Cog):
     def __init__(self, bot):
@@ -41,5 +42,18 @@ class Pekofy(commands.Cog):
         else:
             await ctx.send(replies.copypasta.sfw)
 
+class Pekogacha(commands.Cog):
+    def __init__(self, bot):
+        self.bot = bot
+
+    @commands.command()
+    @commands.cooldown(1, 10.0, commands.BucketType.guild)
+    async def pekogacha(self, ctx):
+        if(random_chance(25)):
+            await ctx.message.reply(random.choice(replies.handling.gacha_win))
+        else:
+            await ctx.message.reply(random.choice(replies.handling.gacha_lose))
+
 def setup(bot):
     bot.add_cog(Pekofy(bot))
+    bot.add_cog(Pekogacha(bot))

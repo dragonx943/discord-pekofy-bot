@@ -28,4 +28,5 @@ bot.load_extension("extensions.reactions")
 bot.load_extension("extensions.help")
 
 bot.run(os.environ["PEKOBOT_TOKEN"])
+
 logging.info("Shutting down...\n")
