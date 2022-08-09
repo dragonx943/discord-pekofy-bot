@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://discord.com/api/oauth2/authorize?client_id=817481976797069383&permissions=116736&scope=bot">Invite</a> | 
+    <a href="http://peko.bemxio.xyz">Invite</a> | 
     <a href="https://www.reddit.com/user/pekofy_bot/">Original Reddit bot</a> | 
     <a href="https://www.reddit.com/user/pekofy_bot/comments/krxxol/pekofy_bot_here_peko/">About</a>
 </p>
