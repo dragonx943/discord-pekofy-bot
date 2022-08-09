@@ -1,6 +1,6 @@
 title = "All my commands, peko!"
 description = "If you have any problems with me, feel free to contact the creator on Discord (bemxio#5847) or on Reddit (u/bemxioo) peko!"
-invite = "Here's my invite link peko! https://discord.com/api/oauth2/authorize?client_id=817481976797069383&permissions=116736&scope=bot"
+invite = "Here's my invite link peko! http://peko.bemxio.xyz"
 dm_check = "Check your DMs peko!"
 
 help = {
@@ -15,6 +15,10 @@ help = {
     "pekopasta": {
         "usage": "!pekopasta",
         "description": "Summons a Pekora cosplay copypasta onto the current channel."
+    },
+    "pekogacha": {
+        "usage": "!pekogacha",
+        "description": "Spins a coin for you, and says if it landed on heads or tails!"
     },
     "insult me peko": {
         "usage": "insult me peko",
