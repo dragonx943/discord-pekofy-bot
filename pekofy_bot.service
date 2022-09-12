@@ -1,5 +1,5 @@
 [Unit]
-Description=pekofy_bot's systemd service
+Description=pekofy_bot\'s systemd service
 After=network.target
 
 [Service]
