@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="http://peko.bemxio.xyz">Invite</a> | 
+    <a href="https://cutt.ly/P1PGMJY">Invite</a> | 
     <a href="https://www.reddit.com/user/pekofy_bot/">Original Reddit bot</a> | 
     <a href="https://www.reddit.com/user/pekofy_bot/comments/krxxol/pekofy_bot_here_peko/">About</a>
 </p>
