@@ -1,7 +1,7 @@
-title = "All my commands, peko!"
-description = "If you have any problems with me, feel free to contact the creator on Discord (bemxio#5847) or on Reddit (u/bemxioo) peko!"
-invite = "Here's my invite link peko! http://peko.bemxio.xyz"
-dm_check = "Check your DMs peko!"
+title = "All of my commands, peko!"
+description = "If you have any problems with me, feel free to contact my developer on Discord (@bemxio) or on Reddit (u/bemxioo), peko!"
+invite = "Here's my invite link, peko! https://pekofy_bot.bemxio.xyz/"
+dm_check = "Check your DMs, peko!"
 
 help = {
     "helpeko": {
@@ -35,10 +35,15 @@ help = {
 }
 
 credits = """```
-First of all, thanks to Heroku, for making me have a little place to live on peko!
-Thank you, denki, for helping with my verification peko, so that I could join more than 100 servers!
+Haha, I wasn't really changing throughout the year, 
+so I don't know if anyone will even notice this updated message, peko...
 
-and thank you, all of you that are reading this, for using me and having fun with me! I love you all peko! <3
+But still, some peeps & other stuff helped me become who I am today, so I want to thank them, peko!
+
+First of all, thanks to Heroku and DigitalOcean, for providing me a little comfy place to live in!
+Thank you, denki/Electro, for helping with my verification peko, so that I could spread the pekofication across more servers!
+
+And thank you, all of you, for using me and having fun with me! I love you all, peko! <3
 - pekofy_bot
 ```"""
 

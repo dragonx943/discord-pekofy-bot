@@ -29,12 +29,12 @@ pain_peko = "pain-peko. https://preview.redd.it/dvk3bft2a9l51.jpg?auto=webp&s=d5
 insult_me_peko = "insult me peko"
 pekorat = "pekorat"
 
-cant_dm = "I can't send stuff in your DMs peko!\nPlease enable `User Settings > Privacy & Safety > Allow direct messages from server members` peko."
+cant_dm = "I can't send stuff in your DMs, peko!\nPlease enable `User Settings > Privacy & Safety > Allow direct messages from server members`, if you want me to get into your DMs."
 unexpected_error = """
 Oops, something went wrong peko! 
 
 Please make an issue about this on the GitHub repo, 
-or message my developer (bemxio#5847 on Discord or u/bemxioo on Reddit) including the message below:
+or message my developer (@bemxio on Discord or u/bemxioo on Reddit) including the text below:
 ```
 {}
 ```
@@ -43,19 +43,19 @@ command_cooldown = "You all are going too fast peko~! Please wait {} seconds bef
 message_too_long = "This message is toooo long peko~!!! I can't send the pekofied version of it!"
 
 gacha_win = [
-    "Congratuttrasyon! You won {} Pekos! {}".format(pekos, link) 
+    "Congratuttrasyon! You won {} pekos! {}".format(pekos, link) 
     for pekos, link in {
         "100": "https://www.youtube.com/shorts/xuFSlfznFzU",
         "2000": "https://i.redd.it/jnknro1eysg51.jpg",
-        "1 Morbillion": "https://youtu.be/ANUYB8q5PsE"
+        "1 morbillion": "https://youtu.be/ANUYB8q5PsE"
     }.items()
 ]
 
 gacha_lose = [
-    "Oh no! You lost {} Pekos! {}".format(pekos, link) 
+    "Oh no! You lost {} pekos! {}".format(pekos, link) 
     for pekos, link in {
         "100": "https://i.kym-cdn.com/photos/images/original/002/241/259/1c1.png",
         "1000": "https://www.youtube.com/shorts/ljxEIQZyjGo",
-        "ALL your": "https://www.youtube.com/watch?v=vHpFuQPtE_U"
+        "ALL of your": "https://www.youtube.com/watch?v=vHpFuQPtE_U"
     }.items()
 ]

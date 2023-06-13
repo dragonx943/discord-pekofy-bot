@@ -2,31 +2,30 @@ from discord.ext import commands
 from discord import Intents
 import logging, os
 
-# setting up logging
-logger = logging.basicConfig(
+# set up logging
+logging.basicConfig(
     level=logging.INFO,
     format="(%(asctime)s) [%(levelname)s] %(message)s",
     datefmt="%H:%M:%S",
     
-    filename="logs/pekolog.log", 
-    encoding="utf-8"
+    handlers=[
+        logging.FileHandler(filename="discord.log", encoding="utf-8"),
+        logging.StreamHandler() # for printing stuff to the console
+    ]
 )
 
-# message content intent is required for reactions (replying to a message with a keyword)
+# set up intents
 intents = Intents.default()
 intents.messages = True
 
-prefix = "!"
-bot = commands.Bot(command_prefix=prefix, help_command=None, intents=intents)
+# initialize the bot with the prefix and intents
+bot = commands.Bot(command_prefix="!", help_command=None, intents=intents)
 
-# loading extensions
-bot.load_extension("jishaku")
-
+# load extensions
 bot.load_extension("extensions.events")
 bot.load_extension("extensions.pekofy")
 bot.load_extension("extensions.reactions")
 bot.load_extension("extensions.help")
 
-bot.run(os.environ["PEKOBOT_TOKEN"])
-
-logging.info("Shutting down...\n")
+# run the bot
+bot.run(os.getenv("PEKOBOT_TOKEN"))
