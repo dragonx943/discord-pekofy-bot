@@ -19,10 +19,10 @@ class Help(commands.Cog):
         )
         embed.set_footer(text=f"Invoked by {str(ctx.author)}", icon_url=str(ctx.author.avatar_url))
 
-        for command, docs in replies.docs.help.items():
+        for command in replies.docs.help.values():
             embed.add_field(
-                name=docs["usage"],
-                value=docs["description"]
+                name=command.get("usage"),
+                value=command.get("description")
             )
 
         await ctx.author.send(embed=embed)
