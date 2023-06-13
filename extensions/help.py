@@ -30,9 +30,9 @@ class Help(commands.Cog):
         if ctx.channel.type != ChannelType.private:
             await ctx.message.reply(replies.docs.dm_check, mention_author=False)
 
-        if datetime.now() < datetime(2022, 3, 12):
-            # not sending the birthday embed after a week from March 5th
-            await ctx.author.send(embed=self.birthday())
+        #if datetime.now() < datetime(2022, 3, 12):
+        #    # not sending the birthday embed after a week from March 5th
+        #    await ctx.author.send(embed=self.birthday())
     
     def birthday(self):
         embed = Embed(
