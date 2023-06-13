@@ -25,7 +25,7 @@ no_reference = [
 limit_reached = "Sorry, but I can't pekofy it any further to prevent spam peko. Thank you for your understanding peko."
 
 hey_moona = "Hey Moona!"
-pain_peko = "pain-peko. https://preview.redd.it/dvk3bft2a9l51.jpg?auto=webp&s=d5e53605dc0e99ed55884fc00c9b965c7dd38e7c"
+pain_peko = "pain-peko. https://pekofy_bot.bemxio.xyz/painpeko.webp"
 insult_me_peko = "insult me peko"
 pekorat = "pekorat"
 
