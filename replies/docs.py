@@ -1,6 +1,6 @@
 title = "All of my commands, peko!"
 description = "If you have any problems with me, feel free to contact my developer on Discord (@bemxio) or on Reddit (u/bemxioo), peko!"
-invite = "Here's my invite link, peko! https://pekofy_bot.bemxio.xyz/"
+invite = "Here's my invite link, peko! https://usagi.bemxio.xyz/"
 dm_check = "Check your DMs, peko!"
 
 help = {

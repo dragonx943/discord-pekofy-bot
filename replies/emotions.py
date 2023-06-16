@@ -53,5 +53,5 @@ cute = [
 
 pekorat = [
     "https://www.youtube.com/watch?v=JacN1MzyeKo",
-    "https://pekofy_bot.bemxio.xyz/pekorat.jpg"
+    "https://usagi.bemxio.xyz/pekorat.jpg"
 ]
