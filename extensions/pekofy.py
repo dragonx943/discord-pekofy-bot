@@ -1,9 +1,10 @@
-from discord.ext import commands
-from discord import Embed, ChannelType
 import random
 
-from modules import pekofication
+from discord import ChannelType, Embed
+from discord.ext import commands
+
 import replies
+from modules import pekofication
 
 def random_chance(precent):
     return random.randint(1, 100) <= precent

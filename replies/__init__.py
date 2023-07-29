@@ -1,3 +1,3 @@
-from . import copypasta, emotions, handling, triggers, statuses, docs
+from . import copypasta, docs, emotions, handling, statuses, triggers
 
-__all__ = ["copypasta", "emotions", "handling", "triggers", "statuses", "docs"]
+__all__ = ["copypasta", "docs", "emotions", "handling", "statuses", "triggers"]

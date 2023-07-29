@@ -1,6 +1,9 @@
-from discord.ext import commands, tasks
-import replies
 import random
+
+from discord.ext import commands
+from discord.ext import tasks
+
+import replies
 
 def random_chance(precent):
     return random.randint(1, 100) <= precent

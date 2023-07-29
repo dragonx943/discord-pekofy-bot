@@ -1,7 +1,8 @@
-from discord.ext import commands
-from discord import Embed, ChannelType
-
 from datetime import datetime
+
+from discord import ChannelType, Embed
+from discord.ext import commands
+
 import replies
 
 class Help(commands.Cog):
@@ -17,7 +18,8 @@ class Help(commands.Cog):
 
             timestamp=datetime.now(),
         )
-        embed.set_footer(text=f"Invoked by {str(ctx.author)}", icon_url=str(ctx.author.avatar_url))
+
+        embed.set_footer(text=f"Invoked by @{ctx.author.name}", icon_url=ctx.author.display_avatar.url)
 
         for command in replies.docs.help.values():
             embed.add_field(
@@ -40,6 +42,7 @@ class Help(commands.Cog):
             description=replies.docs.birthday_description,
             colour=0xff9e3d
         )
+
         return embed
     
     @commands.command()
