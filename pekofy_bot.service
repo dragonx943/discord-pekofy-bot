@@ -8,8 +8,8 @@ Restart=always
 RestartSec=3
 User=bemxio
 WorkingDirectory=/home/bemxio/discord-pekofy-bot
-EnvironmentFile=/home/bemxio/.env
-ExecStart=/usr/bin/python3 /home/bemxio/discord-pekofy-bot/bot.py
+EnvironmentFile=/home/bemxio/discord-pekofy-bot/.env
+ExecStart=/home/bemxio/discord-pekofy-bot/.venv/bin/python3 /home/bemxio/discord-pekofy-bot/bot.py
 
 [Install]
 WantedBy=multi-user.target
