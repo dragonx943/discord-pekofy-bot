@@ -52,13 +52,13 @@ async def pekofy_embed(embed):
     pekoembed = embed.to_dict()
 
     if pekoembed.get("title"):
-        pekoembed["title"] = pekofy(pekoembed["title"])
+        pekoembed["title"] = await pekofy(pekoembed["title"])
     
     if pekoembed.get("description"):
-        pekoembed["description"] = pekofy(pekoembed["description"])
+        pekoembed["description"] = await pekofy(pekoembed["description"])
     
     if pekoembed.get("author"):
         if pekoembed["author"].get("name"):
-            pekoembed["author"]["name"] = pekofy(pekoembed["author"]["name"])
+            pekoembed["author"]["name"] = await pekofy(pekoembed["author"]["name"])
 
     return Embed.from_dict(pekoembed)
